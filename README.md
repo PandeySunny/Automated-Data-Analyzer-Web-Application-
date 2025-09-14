@@ -19,19 +19,6 @@ An interactive **Flask-based web application** that allows users to upload CSV f
 
 ---
 
-## 🖼️ Screenshots  
-
-### Upload CSV  
-![Upload Screenshot](./screenshots/upload.png)  
-
-### Dataset Summary  
-![Summary Screenshot](./screenshots/summary.png)  
-
-### Visualizations  
-![Visualizations Screenshot](./screenshots/visuals.png)  
-
----
-
 ## 🛠️ Tech Stack  
 
 - **Backend:** Flask (Python)  
