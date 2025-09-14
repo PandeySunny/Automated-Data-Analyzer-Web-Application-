@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Upload CSV • Data Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Data Analyzer — Upload CSV</h1>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for m in messages %}<p>{{ m }}</p>{% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% if message %}
+      <div class="info"> {{ message }} </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+      <label class="file-label">Select CSV file
+        <input type="file" name="file" accept=".csv" />
+      </label>
+
+      <div class="buttons">
+        <button type="submit" name="action" value="upload" class="btn primary">Submit (Upload)</button>
+        <button type="submit" name="action" value="analyze" class="btn">Analyze</button>
+      </div>
+    </form>
+
+    {% if uploaded_filename %}
+      <div class="uploaded">Current uploaded file: <strong>{{ uploaded_filename.split('/')[-1] }}</strong></div>
+    {% endif %}
+
+    <footer>
+      <small>Uploaded files are saved to <code>uploads/</code>. Plots are saved to <code>static/plots/</code>.</small>
+    </footer>
+  </div>
+</body>
+</html>

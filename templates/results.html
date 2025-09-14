@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Analysis Results • Data Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Analysis Results</h1>
+
+    <div class="meta">
+      <p><strong>File:</strong> {{ filename }}</p>
+      <p><strong>Rows:</strong> {{ rows }} &nbsp; | &nbsp; <strong>Columns:</strong> {{ cols }}</p>
+    </div>
+
+    <h2>Dataset Summary</h2>
+    <!-- invisible-border-table is styled in CSS to have no outer borders -->
+    <div class="table-wrapper">
+      {{ summary_html | safe }}
+    </div>
+
+    <h2>Sample Rows</h2>
+    <div class="table-wrapper">
+      {{ head | safe }}
+    </div>
+
+    <h2>Visualizations</h2>
+    <div class="plots-grid">
+      {% for p in plots %}
+        <div class="plot-card">
+          <img src="{{ url_for('static', filename=p.split('static/')[1]) }}" alt="plot" />
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="back">
+      <a href="{{ url_for('upload_file') }}" class="btn">Upload another file</a>
+    </div>
+
+    <footer>
+      <small>Tip: If images don't appear, check the <code>static/plots/</code> folder for generated PNGs.</small>
+    </footer>
+  </div>
+</body>
+</html>
