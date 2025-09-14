@@ -1,88 +1,86 @@
-# Automated-Data-Analyzer-Web-Application-
-An interactive Flask-based web application that allows users to upload CSV files and instantly generate automated data analysis reports with summary statistics and visualizations.
+# 📊Automated-Data-Analyzer-Web-Application-
+An interactive **Flask-based web application** that allows users to upload CSV files and automatically generate **statistical summaries and visualizations** for exploratory data analysis (EDA).  
 
-🚀 Features
+---
 
-📂 Upload any CSV file through the web interface
+## 🚀 Features  
 
-📝 Dataset summary (rows, columns, dtypes, missing values, statistics)
+- 📂 **CSV Upload Support** (up to 500 MB) with secure validation  
+- 📝 **Dataset Summary**: Data types, non-null counts, unique values, mean & std deviation  
+- 📊 **Visualizations**:  
+  - Histograms  
+  - Boxplots  
+  - Correlation heatmaps  
+  - Bar charts (top categories)  
+  - Pie charts (categorical distributions)  
+- 👀 **Dataset Preview**: View top 10 rows and column-level metadata  
+- ⚡ **Large Dataset Handling**: Efficient sampling for datasets >100k rows  
+- 🔒 **Error Handling**: User-friendly messages for oversized or invalid files  
 
-📊 Visualizations including:
+---
 
-Histograms
+## 🖼️ Screenshots  
 
-Boxplots
+### Upload CSV  
+![Upload Screenshot](./screenshots/upload.png)  
 
-Pie charts
+### Dataset Summary  
+![Summary Screenshot](./screenshots/summary.png)  
 
-Correlation heatmaps
+### Visualizations  
+![Visualizations Screenshot](./screenshots/visuals.png)  
 
-Bar plots
+---
 
-👀 Sample rows preview
+## 🛠️ Tech Stack  
 
-⚡ Easy-to-use browser interface
+- **Backend:** Flask (Python)  
+- **Frontend:** HTML, CSS, Jinja2 Templates  
+- **Data Analysis:** Pandas, NumPy  
+- **Visualizations:** Matplotlib, Seaborn  
+- **Deployment:** Localhost (Flask server)  
 
-🖼️ Screenshots
-Upload CSV
+---
 
-Dataset Summary
+## 📂 Project Structure  
 
-Sample Rows
-
-Visualizations
-
-🛠️ Tech Stack
-
-Backend: Flask (Python)
-
-Frontend: HTML, CSS, Bootstrap
-
-Data Analysis: Pandas, NumPy
-
-Visualizations: Matplotlib, Seaborn
-
-Deployment: Localhost (Flask server)
-
-📂 Project Structure
 Data-Analyzer/
-│── app.py              # Main Flask app  
-│── templates/          # HTML templates (Jinja2)  
-│── static/             # CSS, JS, and generated plots  
-│── uploads/            # Uploaded CSV files  
-│── requirements.txt    # Python dependencies  
-│── README.md           # Project documentation  
-
-⚡ Installation & Usage
-
-Clone the repository
-
-git clone https://github.com/your-username/Data-Analyzer.git
-cd Data-Analyzer
+│── app.py # Main Flask application
+│── templates/ # HTML templates (upload, results)
+│── static/ # CSS, JS, and generated plots
+│ └── plots/ # Auto-generated visualizations
+│── uploads/ # Uploaded CSV files
+│── requirements.txt # Python dependencies
+│── README.md # Project documentation
 
 
-Create a virtual environment & activate it
+---
+
+## Create a virtual environment & activate it
 
 python -m venv venv
-venv\Scripts\activate   # For Windows
-source venv/bin/activate # For Mac/Linux
+venv\Scripts\activate      # For Windows  
+source venv/bin/activate   # For Mac/Linux  
 
+---
 
-Install dependencies
+## Install dependencies
 
 pip install -r requirements.txt
 
+---
 
-Run the Flask app
+## Run the Flask app
 
 python app.py
 
 
 Open in browser
+---
 
 http://127.0.0.1:5000/
 
 👨‍💻 Author
 
 Developed by Pandey Sunny
-💼 Aspiring Data Analyst | Python | SQL | Power BI | Machine Learning
+💼 Aspiring Data Scientist | Data Analyst | Python | SQL | Power BI | Machine Learning Engineer
