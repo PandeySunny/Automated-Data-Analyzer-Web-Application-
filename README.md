@@ -32,14 +32,13 @@ An interactive **Flask-based web application** that allows users to upload CSV f
 ## 📂 Project Structure  
 
 Data-Analyzer/
-│── app.py   # Main Flask application
-│── templates/ # HTML templates (upload, results)
-│── static/ # CSS, JS, and generated plot
-    └── plots/ # Auto-generated visualizations
-
-│── uploads/ # Uploaded CSV files
-│── requirements.txt # Python dependencies
-│── README.md # Project documentation
+├── app.py # Main Flask application
+├── templates/ # HTML templates (upload, results)
+├── static/ # CSS, JS, and generated plots
+│ └── plots/ # Auto-generated visualizations
+├── uploads/ # Uploaded CSV files
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
 
 ---
