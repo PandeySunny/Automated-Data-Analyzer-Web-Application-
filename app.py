@@ -154,7 +154,7 @@ def dataset_summary(df):
     return pd.DataFrame(rows)
 
 
-# --- Routes ---
+# Routes 
 @app.route("/", methods=["GET", "POST"])
 def upload_file():
     message = None
@@ -280,4 +280,5 @@ def too_large(e):
 
 
 if __name__ == "__main__":
+
     app.run(debug=True, threaded=True)
