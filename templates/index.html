@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataInsight Analytics | Professional Data Analysis Platform</title>
+    <meta name="description" content="Automated data analysis platform with advanced visualizations and insights">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="landing-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>DataInsight Analytics</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#tech-stack">Technology</a>
+                <a href="{{ url_for('upload_file') }}" class="nav-cta">Try Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transform Your Data Into
+                    <span class="gradient-text">Actionable Insights</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Professional automated data analysis platform powered by advanced Python algorithms.
+                    Upload CSV files and receive comprehensive statistical analysis with beautiful visualizations in
+                    seconds.
+                </p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('upload_file') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-upload"></i> Start Analysis
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-lg">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">500MB</div>
+                        <div class="stat-label">Max File Size</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Chart Types</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Instant</div>
+                        <div class="stat-label">Results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>Everything you need for comprehensive data analysis</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Automated Visualization</h3>
+                    <p>Generates histograms, boxplots, pie charts, correlation heatmaps, and more automatically based on
+                        your data types.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Statistical Summary</h3>
+                    <p>Comprehensive dataset overview including data types, null counts, unique values, mean, and
+                        standard deviation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Large File Support</h3>
+                    <p>Handles files up to 500MB with intelligent sampling for memory optimization and fast processing.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Works seamlessly on desktop, tablet, and mobile devices with a professional, intuitive interface.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Data Privacy</h3>
+                    <p>All processing happens locally on the server. Your data is never shared with third parties.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Powered by Pandas and NumPy for blazing-fast data analysis and visualization generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to data insights</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3>Upload Your Data</h3>
+                    <p>Select and upload your CSV file. Files up to 500MB are supported.</p>
+                </div>
+
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automatic Analysis</h3>
+                    <p>Our algorithms analyze your data and generate insights instantly.</p>
+                </div>
+
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>View Results</h3>
+                    <p>Explore statistics, tables, and beautiful visualizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="tech-stack" class="tech-stack-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built With Modern Technology</h2>
+                <p>Industry-standard tools and frameworks</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-flask"></i>
+                    <span>Flask</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-table"></i>
+                    <span>Pandas</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-chart-area"></i>
+                    <span>Matplotlib</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-fire"></i>
+                    <span>Seaborn</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-code"></i>
+                    <span>NumPy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Analyze Your Data?</h2>
+                <p>Start exploring your data insights in seconds</p>
+                <a href="{{ url_for('upload_file') }}" class="btn btn-primary btn-xl">
+                    <i class="fas fa-rocket"></i> Get Started Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-chart-line"></i>
+                    <span>DataInsight Analytics</span>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 DataInsight Analytics. Professional Data Analysis Platform.</p>
+                    <p class="tech-credit">Built with Python • Flask • Pandas • Matplotlib • Seaborn</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Data | DataInsight Analytics</title>
+  <meta name="description" content="Upload your CSV file for automated analysis">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="{{ url_for('index') }}" class="nav-brand">
+        <i class="fas fa-chart-line"></i>
+        <span>DataInsight Analytics</span>
+      </a>
+      <div class="nav-links">
+        <a href="{{ url_for('index') }}#features">Features</a>
+        <a href="{{ url_for('index') }}#how-it-works">How It Works</a>
+        <a href="{{ url_for('upload_file') }}" class="nav-cta">Try Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Page Header -->
+    <div style="text-align: center; margin: 2rem 0;">
+      <h1><i class="fas fa-upload"></i> Upload Your Data</h1>
+      <p style="color: var(--gray-600); font-size: 1.125rem;">
+        Select a CSV file to begin automated analysis
+      </p>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="flash">
+      {% for m in messages %}<p>{{ m }}</p>{% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    {% if message %}
+    <div class="info">{{ message }}</div>
+    {% endif %}
+
+    <!-- Main Upload Card -->
+    <div class="glass-card">
+      <form method="post" enctype="multipart/form-data">
+
+        <!-- Upload Zone -->
+        <div class="upload-zone">
+          <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <div class="upload-text">Select your CSV file</div>
+          <div class="upload-hint">Drag and drop or click to browse • Max 500 MB</div>
+        </div>
+
+        <!-- File Input -->
+        <label class="file-label">
+          <input type="file" name="file" accept=".csv" required />
+        </label>
+
+        {% if uploaded_filename %}
+        <div class="previous-file">
+          <p><i class="fas fa-check-circle"></i> <strong>Previous upload:</strong> {{ uploaded_filename.split('/')[-1]
+            }}</p>
+          <small>Select a new file above to analyze different data</small>
+        </div>
+        {% endif %}
+
+        <!-- Action Button -->
+        <div class="buttons">
+          <button type="submit" name="action" value="upload" class="btn btn-primary btn-lg">
+            <i class="fas fa-rocket"></i> Upload & Analyze
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Info Section -->
+    <div style="margin-top: 3rem; text-align: center; color: var(--gray-600);">
+      <h3 style="margin-bottom: 1rem; color: var(--gray-900);">
+        <i class="fas fa-info-circle"></i> Supported Features
+      </h3>
+      <div class="features-grid" style="max-width: 800px; margin: 0 auto;">
+        <div style="padding: 1rem;">
+          <i class="fas fa-file-csv" style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 0.5rem;"></i>
+          <p><strong>CSV Format</strong></p>
+          <small>Any CSV file structure</small>
+        </div>
+        <div style="padding: 1rem;">
+          <i class="fas fa-database" style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 0.5rem;"></i>
+          <p><strong>Large Files</strong></p>
+          <small>Up to 500MB supported</small>
+        </div>
+        <div style="padding: 1rem;">
+          <i class="fas fa-chart-bar" style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 0.5rem;"></i>
+          <p><strong>Auto Visualization</strong></p>
+          <small>10+ chart types generated</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+</body>
+
+</html>
