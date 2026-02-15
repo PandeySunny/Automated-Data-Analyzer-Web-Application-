@@ -1,7 +1,3 @@
-# DataInsight Analytics - Professional Data Analysis Platform
-
-A corporate-grade automated data analysis platform built with Python, Flask, Pandas, and modern web technologies. Perfect for portfolio presentation to MNC recruiters for data analyst positions.
-
 ## 🎯 Project Overview
 
 **DataInsight Analytics** is a full-stack web application that provides automated, comprehensive data analysis and visualization for CSV datasets. The platform demonstrates professional software development practices, clean UI/UX design, and advanced data analytics capabilities.
@@ -182,15 +178,6 @@ Potential improvements to showcase continuous learning:
 - [ ] Real-time data streaming support
 - [ ] API endpoints for programmatic access
 - [ ] Collaborative features
-
-## 📝 License
-
-This project is created for portfolio and educational purposes.
-
-## 👤 Author
-
-Created as a professional portfolio piece demonstrating full-stack web development and data analysis capabilities for MNC job applications.
-
 ---
 
 **Built with** ❤️ **using Python, Flask, Pandas, and modern web technologies**
